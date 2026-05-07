@@ -1,0 +1,13 @@
+services:
+  app:
+    image: mariana1203/ex_u3_mariana:latest
+    ports:
+      - "5015:5000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:admin1234@db/cetech
+    networks:
+      - examen_mtl
+
+networks:
+  examen_mtl:
+    external: true
